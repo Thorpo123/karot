@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Karot privacy policy</title>
+<style>
+:root { --bg: #fbf8f3; --fg: #1f1b16; --muted: #5d564d; --accent: #e8711c; --card: #ffffff; --line: #e9e2d8; }
+@media (prefers-color-scheme: dark) { :root { --bg: #151311; --fg: #f3eee8; --muted: #b5ada3; --accent: #f08a3c; --card: #1f1c19; --line: #2f2a25; } }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+main { max-width: 720px; margin: 0 auto; padding: 32px 16px 64px; }
+h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 8px; }
+h2 { font-size: 1.3rem; margin-top: 2rem; }
+h3 { font-size: 1.1rem; }
+a { color: var(--accent); }
+code { font-size: 0.9em; background: var(--card); border: 1px solid var(--line); border-radius: 4px; padding: 0 4px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px 20px; margin: 16px 0; }
+.muted { color: var(--muted); }
+nav { display: flex; gap: 16px; margin-bottom: 24px; font-size: 0.95rem; }
+footer { margin-top: 48px; font-size: 0.9rem; color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+<nav><a href="/karot/">Support</a><a href="/karot/privacy/">Privacy</a><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use</a></nav>
+<h1 id="privacy-policy-for-karot-carrot">Privacy Policy for Karot
+(Carrot)</h1>
+<p><strong>Last updated: 24 October 2026</strong></p>
+<p>Karot is the App Store name of Carrot, an iOS app that shields social
+media on your own iPhone and unlocks short timed windows of access when
+you tick items off a daily to-do list. On your Home Screen it is called
+Carrot. This policy calls it Carrot.</p>
+<h2 id="the-summary">The summary</h2>
+<p>There is no account, no sign-in, no analytics, no advertising, no
+tracking, and no third party code in the app.</p>
+<p>Carrot itself works entirely on your phone. Only
+<strong>Rewire</strong>, the optional handwritten programme in the
+Carrot + Rewire plan, sends anything off the phone, and only after you
+agree in the app. Rewire sends your sheet photo, your goal, the first
+name you typed, your chosen affirmation, and your recent tied-task
+titles with whether you ticked them, through Carrot's own server, to
+OpenAI. Carrot's server passes them on and does not keep them. Your
+check-in answers never leave the phone.</p>
+<p>Payments are handled entirely by Apple. Carrot never sees your card
+or your Apple Account details.</p>
+<h2 id="what-carrot-stores-on-your-device-and-where">What Carrot stores
+on your device, and where</h2>
+<p>Carrot writes to three places, all on your phone.</p>
+<h3 id="1-the-apps-shared-container">1. The app's shared container</h3>
+<p>An App Group container (<code>group.com.toby.carrot</code>), shared
+between the app and its two Screen Time extensions. It holds:</p>
+<ul>
+<li><strong>Your daily list.</strong> The item titles you type, whether
+each is ticked, and the time of each tick.</li>
+<li><strong>The day's state.</strong> Credits earned and spent, whether
+a window is open and when it must end, and your settings (window length,
+and whether you have linked a Reminders list).</li>
+<li><strong>Your plan, as Apple reported it.</strong> Whether you have
+Carrot or Carrot + Rewire, and the date it runs to, so the shield can
+switch off by itself if the plan ends.</li>
+<li><strong>Your app selection</strong>, as opaque tokens. See "What
+Carrot cannot see" below.</li>
+<li><strong>A short history.</strong> A one line summary per day for the
+last 90 days, so the app can roll the day over correctly. It is written
+but never displayed.</li>
+<li><strong>Your Rewire programme</strong>, if you have started one: the
+goal, the name you typed, the chosen affirmation, day records with tied
+tasks and tick outcomes, and your weekly scores. The sheet photos are
+not stored, in this container or anywhere else.</li>
+</ul>
+<p>This container is part of the app. Deleting Carrot deletes all of
+it.</p>
+<h3 id="2-the-keychain-entry">2. The Keychain entry</h3>
+<p>One entry in the iOS Keychain holds a short factual log: the date you
+first installed Carrot, any later reinstall, days on which you used the
+once-a-day bypass, and any time Screen Time authorization was withdrawn.
+It is counts and dates. It contains no list items and no app names.</p>
+<p>This entry behaves differently from everything else, and it is the
+one thing in this policy worth reading carefully. See "The Keychain
+entry and app deletion".</p>
+<p>Carrot keeps no API key on your phone, and none is built into the
+app: the key for OpenAI lives on Carrot's server (see "Rewire" below).
+Any Keychain entry an earlier version stored a key under is deleted when
+the app launches; if the Keychain is unavailable at that moment the
+deletion is tried again on every later launch, until the entry is
+gone.</p>
+<h3 id="3-app-settings">3. App settings</h3>
+<p>The app's own settings store remembers the date you agreed to
+Rewire's use of AI (so it does not ask again), the identifier of the App
+Attest key described below, and a few display facts (for example the day
+the last celebration played). Deleting the app deletes them.</p>
+<h3 id="nothing-else">Nothing else</h3>
+<p>Carrot creates no other files, uses no iCloud storage, and syncs to
+no other device. If you use Carrot on a second iPhone, the two know
+nothing about each other.</p>
+<h2 id="what-carrot-cannot-see">What Carrot cannot see</h2>
+<p>When you choose which apps to shield, iOS shows you Apple's own
+picker (<code>FamilyActivityPicker</code>). What the app receives back
+is a set of <strong>opaque tokens</strong>. These are meaningless
+identifiers that only the operating system can resolve.</p>
+<p>Carrot cannot read them, cannot turn them back into app names, and
+therefore never knows which apps you chose. That is not a promise the
+app makes; it is how Apple built the API, and it is a deliberate privacy
+protection.</p>
+<p>Carrot also does not receive, and cannot request, any record of your
+app usage history, browsing history, or how long you spend in any app.
+It knows only that an earned window's usage allowance has been reached,
+which iOS tells it as a single threshold event.</p>
+<h2 id="plans-and-payment">Plans and payment</h2>
+<p>Carrot is a free download with auto-renewable subscriptions sold
+through the App Store: Carrot, or Carrot + Rewire, monthly or yearly,
+each starting with a 7-day free trial. Apple takes the payment and holds
+your payment details. Carrot asks your iPhone (through Apple's StoreKit)
+which plan is active, and nothing else. When a plan ends, the shield
+switches off; nothing stays locked.</p>
+<p>You manage or cancel a plan in iOS Settings, under your name, then
+Subscriptions. During a free trial, Carrot schedules one local reminder
+two days before the first payment.</p>
+<h2 id="rewire">Rewire</h2>
+<p>Rewire uses OpenAI, an AI company, to write your affirmation options
+and your daily tied task, and to check the photo of your handwritten
+sheet. The app asks for your agreement before it sends anything, and you
+can withdraw it in Settings at any time.</p>
+<p><strong>What is sent, and only when you use Rewire:</strong> your
+sheet photo, your goal, the first name you typed (if any), your chosen
+affirmation, and your tied-task titles from the last 7 days with whether
+you ticked them.</p>
+<p><strong>How it is sent.</strong> The app sends each request to
+Carrot's own server, a small relay run on Cloudflare Workers. The relay
+checks two things before it passes anything on: that the request comes
+from a genuine copy of Carrot on a genuine iPhone (Apple's App Attest),
+and that your Carrot + Rewire plan is active (the signed transaction
+Apple gave your iPhone). It then sends the request to OpenAI under
+Carrot's own OpenAI account and returns the answer. It does not keep the
+photo, the text or the answer, and it does not log them.</p>
+<p><strong>What the relay does keep:</strong></p>
+<ul>
+<li>for each install, the public half of its App Attest key and a
+counter, so the next request can be checked (no personal
+information);</li>
+<li>for each plan, a count of today's requests, filed under a one-way
+hash of the plan's original transaction id, so the daily limit can
+apply; old counts are deleted automatically;</li>
+<li>the day's total spend with OpenAI, as one number for all users.</li>
+</ul>
+<p><strong>What OpenAI does with it.</strong> Requests are made under
+Carrot's own OpenAI account, so OpenAI's API data-use terms apply. Under
+those terms OpenAI does not use API data to train its models, and may
+keep it for up to 30 days to check for abuse. The consumer ChatGPT terms
+do not apply.</p>
+<p>The sheet photo is not stored on your phone, on Carrot's server, or
+anywhere else Carrot can reach. There is no background sending: requests
+happen only when you use Rewire.</p>
+<h2 id="notifications">Notifications</h2>
+<p>Carrot asks for notification permission the first time a reward
+window opens, or when you start a free trial. Its notifications are
+local and scheduled on your device: a reminder when an open window's
+time is up, a Sunday reminder to record your weekly score while Rewire
+is on, and one reminder two days before a free trial ends. There are no
+push notifications.</p>
+<h2 id="what-carrot-does-not-do">What Carrot does not do</h2>
+<p>Plainly, and in one place:</p>
+<ul>
+<li>It does <strong>not</strong> collect personal information for
+itself. The only things that ever leave the phone are the Rewire items
+listed above, and only after you agree.</li>
+<li>It does <strong>not</strong> use analytics, crash reporting SDKs, or
+advertising SDKs.</li>
+<li>It does <strong>not</strong> track you across apps or websites, and
+it does not use the Advertising Identifier.</li>
+<li>It does <strong>not</strong> contain any third party libraries or
+SDKs.</li>
+<li>It does <strong>not</strong> create an account, and it does not know
+who you are.</li>
+<li>It does <strong>not</strong> upload, back up, or sync your to-do
+items.</li>
+<li>It does <strong>not</strong> monitor anybody else. Carrot is a tool
+for the owner of the phone it is installed on. There is no parent or
+guardian role, no second user, and no remote administration.</li>
+<li>It does <strong>not</strong> read your app usage history or your
+browsing history.</li>
+<li>It does <strong>not</strong> sell or share data with anyone.
+Rewire's requests go to OpenAI through Carrot's server, and nowhere
+else.</li>
+</ul>
+<h2 id="children">Children</h2>
+<p>Carrot is not directed at children and does not knowingly collect
+information from anyone under 13.</p>
+<h2 id="deleting-your-data">Deleting your data</h2>
+<p><strong>Delete the app.</strong> That removes the shared container
+and everything in it: your lists, ticks, credits, settings, selection
+tokens, your Rewire programme, and the 90 day history. Nothing survives
+it except the Keychain entry described next. The relay's daily counts
+expire on their own; to have them removed sooner, email the address
+below.</p>
+<p>To also remove the shield itself, revoke Screen Time access for
+Carrot in iOS Settings &gt; Screen Time, before or after deleting the
+app.</p>
+<p>To disconnect Reminders, revoke Reminders access in iOS Settings &gt;
+Privacy &amp; Security &gt; Reminders. Reminders you already completed
+stay completed, as you would expect.</p>
+<p>To stop a plan, cancel it in iOS Settings, under your name, then
+Subscriptions. Deleting the app does not cancel a subscription.</p>
+<h2 id="reminders-optional">Reminders (optional)</h2>
+<p>If, and only if, you grant Reminders access, Carrot will:</p>
+<ul>
+<li>read the <strong>titles and completion state</strong> of reminders
+in the one list you choose, so it can offer them when you plan your
+day;</li>
+<li>mark a reminder <strong>complete</strong> when you tick the matching
+item in Carrot, and un-complete it if you un-tick that item.</li>
+</ul>
+<p>All of this happens on your device through Apple's EventKit, between
+Carrot and the Reminders app. Nothing is copied off the phone. Carrot
+reads only the list you link, and it remembers the identifier and name
+of that list so it can find it again.</p>
+<p>Reminders access is entirely optional. Carrot works fully without it,
+and you can revoke it at any time in iOS Settings &gt; Privacy &amp;
+Security &gt; Reminders.</p>
+<h2 id="the-keychain-entry-and-app-deletion">The Keychain entry and app
+deletion</h2>
+<p>This is the one exception, and it is deliberate, so it is documented
+rather than buried.</p>
+<p>The install-and-bypass log lives in the iOS Keychain rather than in
+the app's container. On iOS, Keychain items written by an app are
+commonly observed to survive that app being deleted and reinstalled.
+That is the intended behaviour here: it is what lets Carrot say
+"installed on 2 August, reinstalled on 9 August" instead of quietly
+forgetting that deleting the app is a way around it. Carrot is a
+commitment device, and an amnesiac commitment device is not much of
+one.</p>
+<p>Two honest qualifications:</p>
+<ul>
+<li><strong>It is best effort, not a guarantee.</strong> Apple does not
+contract that Keychain items survive app deletion, the behaviour has
+changed across iOS versions in the past, and it may change again. The
+app treats a missing log as a fresh install and carries on.</li>
+<li><strong>It is dates and counts only.</strong> Install date,
+reinstall dates, days on which the bypass was used, and Screen Time
+authorization changes. No list items, no app names, no usage data. It is
+never transmitted anywhere; the ledger is not among the things Rewire
+mode sends.</li>
+</ul>
+<p><strong>To remove it as well as the app:</strong> the entry is scoped
+to Carrot's own Keychain access group, so no other app and no file
+browser can reach it, and iOS provides no user-facing way to delete a
+single app's Keychain item. Your options are:</p>
+<ol type="1">
+<li><strong>Erase the iPhone</strong> (Settings &gt; General &gt;
+Transfer or Reset iPhone &gt; Erase All Content and Settings). This
+removes the Keychain in full. It is obviously drastic, and it is listed
+because it is the only complete answer.</li>
+<li><strong>Ask.</strong> Email the address at the bottom of this page
+and a build that clears the entry on launch can be provided, or an
+in-app option added.</li>
+<li><strong>Do nothing.</strong> It is a handful of dates on your own
+phone, readable by no app but Carrot and by no person but you, and it
+goes nowhere.</li>
+</ol>
+<h2 id="changes-to-this-policy">Changes to this policy</h2>
+<p>If this policy changes, the date at the top changes with it, and the
+change is noted in the App Store release notes.</p>
+<h2 id="contact">Contact</h2>
+<p>Questions about this policy or about the app: <strong><a
+href="mailto:karot.support@proton.me">karot.support@proton.me</a></strong></p>
+<p>Karot is published by Bricks and Mortar Innovations Ltd.</p>
+
+<footer>Karot is published by Bricks and Mortar Innovations Ltd. Contact: <a href="mailto:karot.support@proton.me">karot.support@proton.me</a></footer>
+</main>
+</body>
+</html>
